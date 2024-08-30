@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/codigo', [GenerarQRController::class, 'generateQrCode']);
+Route::get('/formulario', [GenerarQRController::class, 'showForm']);
+Route::post('/generar', [GenerarQRController::class, 'generateQRCodes'])->name('generateQRCodes');
